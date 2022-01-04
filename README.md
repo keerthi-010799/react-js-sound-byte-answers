@@ -114,10 +114,18 @@ answer:  higher-order component is a function that takes a component and returns
 36	How to create props proxy for HOC component?
 
 37	What is context?
+answer:context is used to pass a data through a component tree without passing props.for example, authentication it is used over many components.
+
 38	What is children prop?
+answer: it is used to pass the other component as data like other props in component.Component tree put between component's opening and closing tag will be passed to that component as children prop.
+
 39	How to write comments in React?
+
 40	What is the purpose of using super constructor with props argument?
+answer: constructor with super props is used to pass the 'this.props' variable to its child component.
+
 41	What is reconciliation?
+answer: components state or props change,it compares it with previous one.there is changes occurs re-renders the dom.this process is reconciliation.
 42	How to set state with a dynamic key name?
 43	What would be the common mistake of function being called every time the component renders?
 44	Is lazy function supports named exports?
