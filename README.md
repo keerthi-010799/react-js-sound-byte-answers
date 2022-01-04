@@ -36,7 +36,7 @@ answer:
 *props are read-only and immutable where state are mutable and change by user action.
 
 11	Why should we not update the state directly?
-answer: update state directly not re-rener th component and causes errors.
+answer: update state directly does not re-render the component and causes errors.
 
 12	What is the purpose of callback function as an argument of setState()?
 answer: it is used to make updates after state changes.
@@ -126,13 +126,47 @@ answer: constructor with super props is used to pass the 'this.props' variable t
 
 41	What is reconciliation?
 answer: components state or props change,it compares it with previous one.there is changes occurs re-renders the dom.this process is reconciliation.
+
 42	How to set state with a dynamic key name?
+
 43	What would be the common mistake of function being called every time the component renders?
 44	Is lazy function supports named exports?
 45	Why React uses className over class attribute?
 46	What are fragments?
-47	Why fragments are better than container divs?
-48	What are portals in React?
-49	What are stateless components?
-50	What are stateful components?
+answer: fragment is used to group the list of children without creating a extra node to the dom.
 
+47	Why fragments are better than container divs?
+answer:*fragments of faster than divs beacuse it cannot create extra node to dom.
+*mechanisms in css like  Flexbox and CSS Grid . adding divs in the middle makes it hard to keep the desired layout. 
+
+48	What are portals in React?
+answer:Portal is a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+
+49	What are stateless components?
+answer:the component that independent of state is stateless component.it either class or functional component.
+
+50	What are stateful components?
+answer:the component that depends on its state are called statefull component.it is always class component.
+
+51	How to apply validation on props in React?
+52	What are the advantages of React?
+answer: *it renders in clint and server sides
+*Increases the application's performance with Virtual DOM.
+*JSX makes code easy to read and write.
+*easy to integrate with frameworks like angular.
+
+53	What are the limitations of React?
+answer:*React is just a view library, not a full framework.
+*Integrating React into a traditional MVC framework requires some additional configuration.
+*The code complexity increases with inline templating and JSX.
+
+54	What are error boundaries in React v16
+answer:Error boundaries are components that catch JavaScript errors anywhere in their child component tree, log those errors.
+55	How error boundaries handled in React v15?
+56	What are the recommended ways for static type checking?
+57	What is the use of react-dom package?
+58	What is the purpose of render method of react-dom?
+59	What is ReactDOMServer?
+60	How to use InnerHtml in React?
+61	How to use styles in React?
+62	How events are different in React?
