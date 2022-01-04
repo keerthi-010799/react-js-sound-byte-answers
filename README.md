@@ -48,9 +48,13 @@ answer: * in html,we specify in lower case convention whereas in react, we use c
 14	How to bind methods or event handlers in JSX callbacks?
 15	How to pass a parameter to an event handler or callback?
 16	What are synthetic events in React?
+answer:all events in react are synthetic events.it is used for cross browser support.
 17	What are inline conditional expressions?
 18	What is "key" prop and what is the benefit of using it in arrays of elements?
+answer:key props used to identify which element in array is changed.
+
 19	What is the use of refs?
+answer: it is used to access dom directly without passing through the components.
 20	How to create refs?
 21	What are forward refs?
 22	Which is preferred option with in callback refs and findDOMNode()?
