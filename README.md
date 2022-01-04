@@ -35,6 +35,25 @@ answer:
 *props are read-only and immutable where state are mutable and change by user action.
 
 11	Why should we not update the state directly?
-answer: update state directly not re-rener th component.
+answer: update state directly not re-rener th component and causes errors.
+
 12	What is the purpose of callback function as an argument of setState()?
+answer: it is used to make updates after state changes.
+
 13	What is the difference between HTML and React event handling?
+answer: * in html,we specify in lower case convention whereas in react, we use camel case convention.
+*in html we need to function call for event handler where as in react, we just declare the variable.
+*you can use false to prevent default behavior in html whereas in react we definr prevent default method.
+
+14	How to bind methods or event handlers in JSX callbacks?
+15	How to pass a parameter to an event handler or callback?
+16	What are synthetic events in React?
+17	What are inline conditional expressions?
+18	What is "key" prop and what is the benefit of using it in arrays of elements?
+19	What is the use of refs?
+20	How to create refs?
+21	What are forward refs?
+22	Which is preferred option with in callback refs and findDOMNode()?
+23	Why are String Refs legacy?
+24	What is Virtual DOM?
+25	How Virtual DOM works?
