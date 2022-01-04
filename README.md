@@ -16,6 +16,7 @@ answer: javascript extension syntax used to write html and javascript into react
 5	How to create components in React?
 6	When to use a Class Component over a Function Component?
 answer: if we need states and lifecycle methods use class component otherwise we use functional components.
+
 7	What are Pure Components?
 answer: pure components not re-render when the current state or props and previous state or props are same.it done should component update lifecycle itself.
 i.e it shallow compares the previous state or props to current state or props itself.
@@ -47,17 +48,83 @@ answer: * in html,we specify in lower case convention whereas in react, we use c
 
 14	How to bind methods or event handlers in JSX callbacks?
 15	How to pass a parameter to an event handler or callback?
+
 16	What are synthetic events in React?
 answer:all events in react are synthetic events.it is used for cross browser support.
+
 17	What are inline conditional expressions?
+
 18	What is "key" prop and what is the benefit of using it in arrays of elements?
 answer:key props used to identify which element in array is changed.
 
 19	What is the use of refs?
-answer: it is used to access dom directly without passing through the components.
+answer: it is used for direct to access dom.it isused in in changing value to child without use of props. 
+
 20	How to create refs?
+
 21	What are forward refs?
+answer: passing ref further to its child  is ref forwarding.it is mostly used for reuseable components.
+
 22	Which is preferred option with in callback refs and findDOMNode()?
 23	Why are String Refs legacy?
+
 24	What is Virtual DOM?
+answer:virtual dom is the memory representation of real dom.
 25	How Virtual DOM works?
+answer: * any data changes in component the entire ui is re-rendered in virtual dom.
+        * then it compares current and previous dom.
+        * any  re-render the real dom where any data really changes.
+        
+26	What is the difference between Shadow DOM and Virtual DOM?
+answer: shadow dom is browser technique for scoping variables and css. wheras virtual dom is libraries technique to avoid unwanted changes on real dom.
+
+27	What is React Fiber?
+answer: react fiber is the reconciliation technique or reimplementation technique.its main goal to increase suitability in animation,layout and gestures.
+
+28	What is the main goal of React Fiber?
+
+29	What are controlled components?
+answer: the form data is controlled by component.every state change with its own event handler. 
+30	What are uncontrolled components?
+answer:the form data controlled by dom.every state change can use a ref to get form values from the DOM.
+
+31	What is the difference between createElement and cloneElement?
+32	What is Lifting State Up in React?
+answer:two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+
+33	What are the different phases of component lifecycle?
+ answer:       *mounting
+               *updating
+               *unmounting
+               
+34	What are the lifecycle methods of React?
+answer:
+            *componentwillmount
+            *componentdidmount     
+            *getDerivedStateFromProps
+            *shouldcomponentupdate
+            *componentwillupdate
+            *componentWillReceiveProps
+            *componentdidupdate
+            *componentwillunmount
+            
+35	What are Higher-Order components?
+answer:  higher-order component is a function that takes a component and returns a new component. it is a pattern that emerges from React’s compositional nature
+
+36	How to create props proxy for HOC component?
+
+37	What is context?
+38	What is children prop?
+39	How to write comments in React?
+40	What is the purpose of using super constructor with props argument?
+41	What is reconciliation?
+42	How to set state with a dynamic key name?
+43	What would be the common mistake of function being called every time the component renders?
+44	Is lazy function supports named exports?
+45	Why React uses className over class attribute?
+46	What are fragments?
+47	Why fragments are better than container divs?
+48	What are portals in React?
+49	What are stateless components?
+50	What are stateful components?
+
