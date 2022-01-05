@@ -409,11 +409,95 @@ Connect the above props to your container: The object returned by the mapStateTo
   answer:The @ symbol is in fact a JavaScript expression used to signify decorators. Decorators make it possible to annotate and modify classes and properties at design time.
   
 165	What is the difference between React context and React Redux?
-  
-166	Why are Redux state functions called reducers?
+166	Why are Redux state functions called reducers?  
+  answer:Reducers always return the accumulation of the state (based on all previous and current actions). they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters. This state is then reduced (or accumulated) based on the action, and then the next state is returned. You could reduce a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
+
 167	How to make AJAX request in Redux?
+  You can use redux-thunk middleware which allows you to define async actions.
+
 168	Should I keep all component's state in Redux store?
+  answer:Keep your data in the Redux store, and the UI related state internally in the component.
+
 169	What is the proper way to access Redux store?
+  answer: we can access your store in a component by the connect() function, that creates a new component that wraps around your existing one.
+   This allows you to map state and action creators to your component, and have them passed in automatically as your store updates.
+  
 170	What is the difference between component and container in React Redux?
+  answer:
+  *Component is a class or function component that describes the presentational part of your application.
+  *Container is a component that is connected to a Redux store. Containers subscribe to Redux state updates and dispatch actions, and they don't render DOM elements;
+  
 171	What is the purpose of the constants in Redux?
+  answer:Constants allows you to easily find all usages of that specific functionality across the project when you use an IDE. It also prevents you from introducing bugs caused by typos like ReferenceError.
+
+
 172	What are the different ways to write mapDispatchToProps()?
+173	What is the use of the ownProps parameter in mapStateToProps() and mapDispatchToProps()?
+  
+174	How to structure Redux top level directories?
+  answer:
+  *container
+  *component
+  *action 
+  *reducers
+  *store
+  
+175	What is redux-saga?
+  answer:redux-saga is a library that aims to make side effects (asynchronous things like data fetching and accessing the browser cache) in React/Redux applications easier and better.
+176	What is the mental model of redux-saga?
+177	What are the differences between call and put in redux-saga
+178	What is Redux Thunk?
+  answer:Redux Thunk middleware allows you to write action creators that return a function instead of an action and it deals with side effects like  network calls. 
+  The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. 
+  The inner function receives the store methods dispatch() and getState() as parameters.
+  
+179	What are the differences between redux-saga and redux-thunk
+  answer:
+  *Both Redux Thunk and Redux Saga take care of dealing with side effects.
+  *Thunk uses Promises to deal with them, whereas Saga uses Generators. 
+  *Thunk is simple to use and Promises are familiar to many developers, Sagas/Generators are more powerful but you will need to learn them. 
+  
+180	What is Redux DevTools?
+  annswer: Redux DevTools is a live-editing time travel environment for Redux with hot reloading, action replay, and customizable UI.
+  you can use Redux DevTools Extension for Chrome and Firefox.
+181	What are the features of Redux DevTools?
+answer:
+*Lets you inspect every state and action payload.
+*Lets you go back in time by cancelling actions.
+*If you change the reducer code, each staged action will be re-evaluated.
+*If the reducers throw, you will see during which action this happened, and what the error was.
+*With persistState() store enhancer, you can persist debug sessions across page reloads.
+  
+182	What are Redux selectors and Why to use them?
+  answer:Selectors are functions that take Redux state as an argument and return some data to pass to the component.
+  The selector can compute derived data, allowing Redux to store the minimal possible state
+  The selector is not recomputed unless one of its arguments changes
+  
+183	What is Redux Form?
+  answer:Redux Form works to enable a form in React to use Redux to store all of its state. Redux Form can be used with raw HTML5 inputs, it also works very well with common UI frameworks like Material UI, React Widgets and React Bootstrap.
+
+184	What are the main features of Redux Form?
+  answer:
+  *Field values persistence via Redux store.
+  *Validation (sync/async) and submission.
+  *Formatting, parsing and normalization of field values.
+  
+185	How to add multiple middlewares to Redux?
+  answer:You can use applyMiddleware().
+ example: you can add redux-thunk and logger passing them as arguments to applyMiddleware():
+
+  const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore)
+
+186	How to set initial state in Redux?
+  answer:You need to pass initial state as second argument to createStore:
+example:const store = createStore(
+  rootReducer,
+  initialState
+)
+  
+187	How Relay is different from Redux?
+  answer: Relay is similar to Redux in that they both use a single store. The main difference is that relay only manages state originated from the server, and all access to the state is used via GraphQL queries (for reading data) and mutations (for changing data). Relay caches the data for you and optimizes data fetching for you, by fetching only changed data and nothing more.
+
+188	What is an action in Redux?
+  answer: actions are javascript objects or payload send from your application to redux store. They are the only source of information for the store. 
+  Actions must have a type property that indicates the type of action being performed.
